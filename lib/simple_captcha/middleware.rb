@@ -40,7 +40,7 @@ module SimpleCaptcha
       end
       
       def captcha_path?(request_path)
-        request_path.include?('/simple_captcha')
+        request_path.include?('/captcha')
       end
       
       def send_file(path, options = {})
