@@ -1,6 +1,6 @@
 require 'tempfile'
 module SimpleCaptcha #:nodoc
-  module ImageHelpers #:nodoc
+  module ImageHelper #:nodoc
 
     mattr_accessor :image_styles
     @@image_styles = {
@@ -58,10 +58,10 @@ module SimpleCaptcha #:nodoc
     private
 
       def generate_simple_captcha_image(simple_captcha_key, session) #:nodoc
-        amplitude, frequency = ImageHelpers.distortion(SimpleCaptcha.distortion)
+        amplitude, frequency = ImageHelper.distortion(SimpleCaptcha.distortion)
         text = Utils::simple_captcha_value(simple_captcha_key, session)
 
-        params = ImageHelpers.image_params(SimpleCaptcha.image_style).dup
+        params = ImageHelper.image_params(SimpleCaptcha.image_style).dup
         params << "-size #{SimpleCaptcha.image_size}"
         params << "-wave #{amplitude}x#{frequency}"
         #params << "-gravity 'Center'"

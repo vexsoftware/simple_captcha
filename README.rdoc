@@ -37,12 +37,6 @@ on the version of rails your application is using.
 
 ===Controller Based
 
-Add the following line in the file "app/controllers/application.rb"
-
-  ApplicationController < ActionController::Base
-    include SimpleCaptcha::ControllerHelpers
-  end
-
 In the view file within the form tags add this code
 
   <%= show_simple_captcha %>

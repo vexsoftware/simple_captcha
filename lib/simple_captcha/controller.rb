@@ -1,5 +1,5 @@
 module SimpleCaptcha #:nodoc 
-  module ControllerHelpers #:nodoc
+  module ControllerHelper #:nodoc
     # This method is to validate the simple captcha in controller.
     # It means when the captcha is controller based i.e. :object has not been passed to the method show_simple_captcha.
     #

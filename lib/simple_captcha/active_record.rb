@@ -1,5 +1,5 @@
 module SimpleCaptcha #:nodoc
-  module ModelHelpers #:nodoc
+  module ModelHelper #:nodoc
     def self.included(base)
       base.extend(SingletonMethods)
     end

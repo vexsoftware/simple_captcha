@@ -1,7 +1,7 @@
 # encoding: utf-8
 module SimpleCaptcha
   class Middleware
-    include SimpleCaptcha::ImageHelpers
+    include SimpleCaptcha::ImageHelper
     
     DEFAULT_SEND_FILE_OPTIONS = {
       :type         => 'application/octet-stream'.freeze,

@@ -3,15 +3,15 @@
 module SimpleCaptcha
   autoload :Utils,             'simple_captcha/utils'
 
-  autoload :ImageHelpers,      'simple_captcha/image'
+  autoload :ImageHelper,      'simple_captcha/image'
   autoload :ViewHelper,        'simple_captcha/view'
-  autoload :ControllerHelpers, 'simple_captcha/controller'
+  autoload :ControllerHelper, 'simple_captcha/controller'
 
   autoload :FormBuilder,       'simple_captcha/form_builder'
   autoload :CustomFormBuilder, 'simple_captcha/formtastic'
 
   if defined?(ActiveRecord)
-    autoload :ModelHelpers,      'simple_captcha/active_record'
+    autoload :ModelHelper,      'simple_captcha/active_record'
     autoload :SimpleCaptchaData, 'simple_captcha/simple_captcha_data'
   else
     autoload :SimpleCaptchaData,      'simple_captcha/simple_captcha_data_mongoid.rb'
