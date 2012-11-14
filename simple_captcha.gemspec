@@ -12,8 +12,8 @@ Gem::Specification.new do |s|
   s.email = ["galeta.igor@gmail.com", "kramer@vexsoftware.com"]
   s.homepage = "http://github.com/vexsoftware/simple_captcha"
   
-  s.files = Dir["{lib}/**/*"] + ["Rakefile", "README.rdoc"]
+  s.files = Dir["{lib}/**/*"] + ["Rakefile", "README.md"]
   s.test_files = Dir["{test}/**/*"]
-  s.extra_rdoc_files = ["README.rdoc"]
+  s.extra_rdoc_files = ["README.md"]
   s.require_paths = ["lib"]
 end
