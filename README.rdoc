@@ -24,11 +24,7 @@ backward compatibility with previous versions of Rails.
 
 ==Installation
 
-  gem "galetahub-simple_captcha", :require => "simple_captcha"
-
-or
-
-  gem 'galetahub-simple_captcha', :require => 'simple_captcha', :git => 'git://github.com/galetahub/simple-captcha.git'
+  gem 'simple_captcha', :git => 'git://github.com/vexsoftware/simple_captcha.git'
 
 ==Setup
 
@@ -36,8 +32,6 @@ After installation, follow these simple steps to setup the plugin. The setup wil
 on the version of rails your application is using.
 
   rails generate simple_captcha
-
-  rake db:migrate
 
 ==Usage
 
