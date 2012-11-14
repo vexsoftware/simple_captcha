@@ -64,7 +64,16 @@ module SimpleCaptcha #:nodoc
         query = defaults.collect{ |key, value| "#{key}=#{value}" }.join('&')
         url = "/captcha?code=#{simple_captcha_key}&#{query}"
         
-        image_tag(url, :alt => 'captcha')
+        # Temporarily remove the asset host.
+        original_asset_host = ActionController::Base.asset_host
+        ActionController::Base.asset_host = nil
+
+        image = image_tag(url, :alt => 'captcha')
+
+        # Restore the asset host.
+        ActionController::Base.asset_host = original_asset_host
+
+        image
       end
       
       def simple_captcha_field(options={})
