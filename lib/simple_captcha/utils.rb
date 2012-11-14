@@ -20,12 +20,12 @@ module SimpleCaptcha #:nodoc
       output
     end
 
-    def self.simple_captcha_value(key) #:nodoc
-      SimpleCaptchaData.get_data(key).value rescue nil
+    def self.simple_captcha_value(key, session) #:nodoc
+      session[:simple_captcha][key] rescue nil
     end
 
-    def self.simple_captcha_passed!(key) #:nodoc
-      SimpleCaptchaData.remove_data(key)
+    def self.simple_captcha_passed!(key, session) #:nodoc
+      session[:simple_captcha].delete(key)
     end
 
     def self.generate_key(*args)
