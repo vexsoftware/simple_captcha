@@ -8,7 +8,7 @@ module SimpleCaptcha #:nodoc
     #
     #  class User < ActiveRecord::Base
     #
-    #    apply_simple_captcha :message => "my customized message"
+    #    simple_captcha :message => "my customized message"
     #
     #  end
     #
@@ -29,7 +29,7 @@ module SimpleCaptcha #:nodoc
     #
     #  @user.save                # when captcha validation is not required.
     module SingletonMethods
-      def apply_simple_captcha(options = {})
+      def simple_captcha(options = {})
         options = { :add_to_base => false }.merge(options)
                   
         class_attribute :simple_captcha_options

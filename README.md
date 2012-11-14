@@ -46,7 +46,7 @@ In the view file within the form tags write this code:
 
 And in the model add:
 ```ruby
-apply_simple_captcha
+simple_captcha
 ```
 
 #### FormBuilder Helper
