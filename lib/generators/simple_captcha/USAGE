@@ -1,0 +1,4 @@
+SimplaCaptcha
+=============
+# Generate SimpleCaptcha view partial.
+  rails generate simple_captcha:partial

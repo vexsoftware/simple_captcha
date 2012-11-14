@@ -48,11 +48,11 @@ module SimpleCaptcha #:nodoc
       
       defaults = {
          :image => simple_captcha_image(key, options),
-         :label => options[:label] || I18n.t('simple_captcha.label'),
+         :label => options[:label] || I18n.t('simple_captcha.label', :default => "CAPTCHA"),
          :field => simple_captcha_field(options)
-         }
+      }
          
-      render :partial => 'simple_captcha/simple_captcha', :locals => { :simple_captcha_options => defaults }
+      render :partial => 'simple_captcha/captcha', :locals => { :simple_captcha_options => defaults }
     end
 
     private
